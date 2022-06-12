@@ -7,8 +7,15 @@
     <groupId>com.fzyue</groupId>
     <artifactId>fzyue-cloud</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <packaging>pom</packaging>
+
+
+    <modules>
+        <module>cloud-provider-payment</module>
+        <module>cloud-consumer-order</module>
+        <module>cloud-api-commons</module>
+    </modules>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -62,7 +69,7 @@
                 <version>${druid.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.singledog.spring.boot</groupId>
+                <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.spring.boot.version}</version>
             </dependency>
