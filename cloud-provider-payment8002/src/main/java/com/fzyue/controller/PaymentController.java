@@ -41,4 +41,9 @@ public class PaymentController {
         }
     }
 
+    @GetMapping("/balamce/lb")
+    public String getPort() {
+        return serverPort;
+    }
+
 }

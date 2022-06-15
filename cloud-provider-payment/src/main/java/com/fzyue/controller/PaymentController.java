@@ -64,5 +64,10 @@ public class PaymentController {
         return this.discoveryClient;
     }
 
+    @GetMapping("/balamce/lb")
+    public String getPort() {
+        return serverPort;
+    }
+
 
 }
