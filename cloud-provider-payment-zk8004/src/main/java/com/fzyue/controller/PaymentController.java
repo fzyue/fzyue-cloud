@@ -64,5 +64,11 @@ public class PaymentController {
         return this.discoveryClient;
     }
 
+    @RequestMapping(value = "/payment/zk")
+    public String paymentzk()
+    {
+        return "springcloud with zookeeper: "+serverPort+"\t"+ UUID.randomUUID().toString();
+    }
+
 
 }
