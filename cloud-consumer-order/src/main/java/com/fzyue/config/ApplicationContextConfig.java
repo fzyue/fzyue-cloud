@@ -19,4 +19,3 @@ public class ApplicationContextConfig
         return new RestTemplate();
     }
 }
-//applicationContext.xml <bean id="" class="">

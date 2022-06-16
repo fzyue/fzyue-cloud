@@ -46,4 +46,14 @@ public class PaymentController {
         return serverPort;
     }
 
+    @GetMapping("/feign-timeout")
+    public String feignTimeout() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+        }
+        return serverPort;
+    }
+
+
 }
