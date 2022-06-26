@@ -45,7 +45,7 @@ public class OrderController
     @GetMapping("/consumer/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id)
     {
-        return restTemplate.getForObject(PAYMENT_URL+"/payment/get/"+id,CommonResult.class);
+        return restTemplate.getForObject("http://localhost:8001"+"/payment/get/"+id,CommonResult.class);
     }
 
     @GetMapping("/consumer/payment/getForEntity/{id}")
@@ -61,6 +61,7 @@ public class OrderController
     @GetMapping(value = "/consumer/payment/lb")
     public String getPaymentLB()
     {
+        // 要去除ApplicationContextConfig中的@LoadBalanced
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
 
         if(instances == null || instances.size() <= 0)

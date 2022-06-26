@@ -3,6 +3,8 @@ server:
 
 
 eureka:
+  server:
+    peer-node-read-timeout-ms: 10000
   instance:
     hostname: eureka7001.com #eureka服务端的实例名称
   client:
